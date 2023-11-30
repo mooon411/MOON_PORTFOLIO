@@ -1,0 +1,9 @@
+/* 가로스크롤 숨기기 */
+html, body {
+    overflow-x: hidden;
+}
+/* 섹션 기본 설정 */
+section {
+    position: relative;
+    height: 1000px;
+}
