@@ -1,0 +1,80 @@
+.port_wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.port_wrap li {
+    width: 25%;
+    min-width: 300px;
+}
+.port_wrap li > a {
+    display: block;
+    /* width: 300px; */
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--font-color);
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.port_wrap ul:nth-child(1) li > a {
+    margin-left: 0;
+}
+.port_wrap ul:nth-child(2) {
+    margin-top: 150px;
+}
+.port_wrap ul:nth-child(4) {
+    margin-top: 50px;
+}
+.port_wrap ul:nth-child(4) li > a {
+    margin-right: 0;
+}
+.port_wrap li > a > span {
+    position: absolute;
+    top: 1.25rem;
+    left: 40%;
+    width: 100%;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    font-family: var(en-font);
+    font-size: 1rem;
+}
+.port_wrap li > a h4 {
+    font-family: var(--point-font);
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: .9;
+    margin-bottom: 150px;
+}
+.port_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.port_info p {
+    width: 80%;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    font-size: 0.85rem;
+}
+.port_info button {
+    width: 25px;
+    height: 25px;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.port_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}

@@ -49,6 +49,18 @@ textarea {
     "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
 }
 
+/* button 초기화 */
+button {
+    color: inherit;
+    background: inherit;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer
+}
+
 /* 링크 초기화 */
 a,
 a:hover,

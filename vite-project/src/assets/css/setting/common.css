@@ -2,8 +2,46 @@
 html, body {
     overflow-x: hidden;
 }
+
 /* 섹션 기본 설정 */
 section {
     position: relative;
-    height: 1000px;
+    height: auto;
+}
+
+/* 컨테이너 사이즈 */
+.container {
+    padding: 0 100px;
+}
+
+/* 섹션 타이틀 */
+.section_title {
+    width: 100%;
+    margin: 1rem 0;
+    padding: .7rem 0;
+    border-top: 1px solid var(--font-color);
+}
+.section_title h3 {
+    font-size: 0.7rem;
+    font-family: var(--en-font);
+    text-transform: uppercase;
+}
+
+/* 버튼 스타일 */
+.btn_style {
+    width: 400px;
+    padding: 1rem;
+    border-bottom: 2px solid var(--font-color);
+}
+.btn_style a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--en-font);
+    font-weight: 100;
+}
+.btn_style a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }

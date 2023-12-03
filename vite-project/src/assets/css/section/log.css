@@ -1,0 +1,23 @@
+.log_text {
+    width: 100%;
+    text-align: right;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 150px;
+}
+
+.log_moment ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.log_moment img {
+    /* max-width: 45%; */
+}
+.line_one img:nth-child(1) {
+    height: 480px;
+}
+.line_one img:nth-child(2) {
+    height: 300px;
+}

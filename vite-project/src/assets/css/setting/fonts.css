@@ -1,3 +1,4 @@
+/* 메인 타이틀 */
 @font-face {
     font-family: 'PartizenoRegular';
     src: url('../../font/PartizenoRegular.woff2') format('woff2');
@@ -7,7 +8,22 @@
     font-family: 'PartizenoRegular';
 }
 
+/* 포인트 폰트 */
+@font-face {
+    font-family: 'PPPangaia-Medium';
+    src: url('../../font/PPPangaia-Medium.woff2') format('woff2');
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200;300;400;700&display=swap');
 .roboto {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed';
+}
+
+/* 조선일보 */
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

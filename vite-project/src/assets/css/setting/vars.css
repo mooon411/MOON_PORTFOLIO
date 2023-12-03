@@ -1,3 +1,16 @@
 :root {
-    --font-point: 'PartizenoRegular';
+    background-color: var(--bg-color);
+    color: var(--font-color);
+
+    /* font */
+    --title-font: 'PartizenoRegular';
+    --point-font: 'PPPangaia-Medium';
+    --en-font: 'Roboto Condensed';
+    --ko-font: 'Chosunilbo_myungjo';
+
+    /* color */
+    --font-color: #f9f9f9;
+    --bg-color: #1C1C1C;
+    --point-color: #1c46b2;
+    
 }

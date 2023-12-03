@@ -9,3 +9,6 @@
 /* section */
 @import url(section/header.css);
 @import url(section/main.css);
+@import url(section/about.css);
+@import url(section/portfolio.css);
+@import url(section/log.css);

@@ -1,0 +1,45 @@
+#section2 {
+    width: 100%;
+    background: var(--bg-color);
+}
+.about_text {
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
+.about_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   
+    margin-bottom: 40px; 
+}
+.about_box .about_item {
+    width: 400px;
+}
+.about_box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    filter:grayscale(1);
+    margin-bottom: 1rem;
+}
+.about_box p {
+    font-size: 0.85rem;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+}
+
+.about_btn {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+.about_btn .btn_style:nth-child(1) {
+    margin-right: 20px;
+}

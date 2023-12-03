@@ -1,14 +1,3 @@
-body {
-    /* 가로스크롤 숨기기 */
-    overflow-x: hidden;
-}
-
-/* 섹션 기본 설정 */
-section {
-    position: relative;
-    height: 1000px;
-}
-
 /* section1 ---> three.js */
 #section1 {
     width: 100%;
@@ -29,17 +18,5 @@ section {
     color: white;
     text-align: center;
     line-height: 0.9;
-}
-
-
-
-
-#section2 {
-    width: 100%;
-    background: #705e5e;
-}
-#section3 {
-    width: 100%;
-    height: 1000px;
-    background: #c8c8c8;
+    font-family: var(--title-font);
 }

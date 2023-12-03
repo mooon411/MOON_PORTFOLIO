@@ -1,0 +1,25 @@
+#header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 100px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+#header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header nav ul li {
+    padding: 0 20px;
+    color: #fff;
+    font-family: var(--en-font);
+    font-weight: 100;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
