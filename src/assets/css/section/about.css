@@ -1,33 +1,48 @@
 #section2 {
     width: 100%;
+    height: 100vh;
     background: var(--bg-color);
+    position: relative;
+    padding-top: 2.5rem;
 }
 .about_text {
     font-family: var(--ko-font);
     line-height: 1.5;
-    font-size: 1rem;
-    margin-top: 40px;
-    margin-bottom: 200px;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.about_bottom {
+    position: absolute;
+    bottom: 10%;
+    right: 5.2%;
 }
 .about_box {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;   
-    margin-bottom: 40px; 
+    margin-bottom: 3rem; 
 }
 .about_box .about_item {
-    width: 400px;
+    max-width: 400px;
 }
 .about_box img {
-    width: 60px;
-    height: 60px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     filter:grayscale(1);
     margin-bottom: 1rem;
+    transition: 0.8s;
 }
+.about_bottom:hover .about_box img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    filter:grayscale(0);
+}
+
 .about_box p {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-family: var(--ko-font);
     line-height: 1.5;
 }
@@ -37,9 +52,8 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    margin-bottom: 180px;
 }
 
 .about_btn .btn_style:nth-child(1) {
-    margin-right: 20px;
+    margin-right: 1rem;
 }

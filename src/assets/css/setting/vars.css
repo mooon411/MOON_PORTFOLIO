@@ -1,6 +1,7 @@
 :root {
     background-color: var(--bg-color);
     color: var(--font-color);
+    font-size: 16px;
 
     /* font */
     --title-font: 'PartizenoRegular';
@@ -10,6 +11,8 @@
 
     /* color */
     --font-color: #f9f9f9;
+    --n-font-color: #aaa;
+    --gray-color: #5d5d5d;
     --bg-color: #1C1C1C;
     --point-color: #1c46b2;
     

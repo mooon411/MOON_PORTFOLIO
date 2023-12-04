@@ -1,25 +1,56 @@
-#header {
+/* header */
+#myHeader {
     width: 100%;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 100px;
-    position: absolute;
+    padding: 1rem 5.2%;
     z-index: 1000;
-    top: 0;
     left: 0;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    transition: top 0.5s ease;
 }
-#header nav ul {
+/* header event css */
+.nav-up {
+    top: -60px;
+}
+.nav-down {
+    top: 0px;
+}
+
+/* nav */
+#myHeader nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#header nav ul li {
-    padding: 0 20px;
+#myHeader nav ul li {
+    margin: 0 1rem;
+    padding: 5px;
     color: #fff;
     font-family: var(--en-font);
     font-weight: 100;
     font-size: 0.85rem;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 밑줄 효과 after */
+#myHeader nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    z-index: 10;
+    background-color: var(--font-color);
+    transition: 0.5s ease;
+}
+#myHeader nav ul li:hover::after {
+  left: 0%;
+  width: 100%;
 }
