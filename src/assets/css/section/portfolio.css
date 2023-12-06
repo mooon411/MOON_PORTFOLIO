@@ -119,14 +119,19 @@
     text-transform: uppercase;
     font-family: var(--point-font);
 }
+
 .circle_link a div::after {
     display: block;
-    content: 'my\Askill';
+    content: 'info\Amation!';
     color: var(--bg-color);
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    transition: 0.4s;
+}
+.circle_link a div:hover::after {
+    opacity: 0.5;
 }
