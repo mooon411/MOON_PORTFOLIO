@@ -13,42 +13,69 @@
 <body>
     <header id="myHeader">
         <div id="logo">
-            <a href="#">
+            <a href="#home">
                 <img src="/assets/img/moon.svg" alt="moon">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="#">abot</a></li>
-                <li><a href="#">work</a></li>
-                <li><a href="#">comment</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#port">port</a></li>
+                <li><a href="#log">log</a></li>
+                <li><a href="#info">info</a></li>
+                <li><a href="#talk">Talk</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
+        <div class="nav_btn">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="m_nav">
+                    <ul>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#port">port</a></li>
+                        <li><a href="#log">log</a></li>
+                        <li><a href="#info">info</a></li>
+                        <li><a href="#talk">Talk</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
     </header>
     <main>
 
-        <section id="section1">
-            <h1 class="main_title">
+        <section id="home">
+            <h1 class="main_title reveal reveal_BTT" data-delay="0.6">
                 Creative<br>
                 Developer
             </h1>
+            <div class="intro_text reveal reveal_LTR" data-delay="0.9">
+                <h3>Ideas into Code !</h3>
+                <p>웹 퍼블리싱 2년 이상의 다채로운 경험, 과거의 노하우를 바탕으로 사용자 경험(UX)을 중시하는 창의적이고 혁신적인 웹 프론트엔드 개발자가 될 것입니다:)</p>
+                <a href="#port">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
             <div id="threeJs"></div>
         </section>
         <!-- // MAIN -->
 
-        <section id="section2" class="container">
+        <section id="about" class="container">
             <div class="section_title">
                 <h3>● about me</h3>
             </div>
-            <div class="about_text">
+            <div class="about_text reveal reveal_LTR" data-delay="0.5">
                 퍼블리셔 2년 경력과 국비 교육 수료를 통해 프론트엔드 개발자로의 전환을 이루어낸 신입 개발자 문영인입니다.<br>
                 웹사이트의 시각적인 요소와 사용자 인터페이스에 대한 이해를하고 프론트엔드 개발에 대한 열정과 지식을 쌓아오며,<br>
                 새로운 도전을 통해 성장해 나가고 있습니다. 웹 퍼블리싱에서 축적한 디자인 감각과 프론트엔드 개발 지식을 결합하여<br>
                 사용자들에게 즐거움과 유용함을 제공하는 웹사이트를 구축하는 것이 저의 궁극적인 목표입니다.<br>
             </div>
-            <div class="about_bottom">
-                <div class="about_box">
+            <div class="about_bottom reveal" data-delay="0.6">
+                <div class="about_box  reveal reveal_BTT" data-delay="1">
                     <div class="about_item">
                         <img src="/assets/img/icon1.jpg" alt="moon">
                         <p>
@@ -81,9 +108,9 @@
                 </div>
             </div>
         </section>
-        <!-- // ABOUT -->
+        <!-- // about -->
 
-        <section id="section3" class="container">
+        <section id="port" class="container">
             <div class="section_title">
                 <h3>● portfolio</h3>
             </div>
@@ -93,7 +120,7 @@
                         <a href="#">
                             <span>react</span>
                             <h4>
-                                react<br>youtube
+                                1.react<br>youtube
                             </h4>
                             <div class="port_info">
                                 <p>
@@ -152,7 +179,7 @@
                         <a href="#">
                             <span>react</span>
                             <h4>
-                                react<br>youtube
+                                2.react<br>youtube
                             </h4>
                             <div class="port_info">
                                 <p>
@@ -168,7 +195,7 @@
                         </a>
                     </li>
                     <li class="circle_link">
-                        <a href="#">
+                        <a href="#info">
                             <div></div>
                         </a>
                     </li>
@@ -197,7 +224,7 @@
                         <a href="#">
                             <span>react</span>
                             <h4>
-                                react<br>youtube
+                                3.react<br>youtube
                             </h4>
                             <div class="port_info">
                                 <p>
@@ -256,7 +283,7 @@
                         <a href="#">
                             <span>react</span>
                             <h4>
-                                react<br>youtube
+                                4.react<br>youtube
                             </h4>
                             <div class="port_info">
                                 <p>
@@ -322,12 +349,13 @@
                 </div>
             </div>
         </section>
+        <!-- port -->
 
-        <section id="section4" class="container">
+        <section id="log" class="container">
             <div class="section_title">
                 <h3>● developer log</h3>
             </div>
-            <div class="log_text">
+            <div class="log_text reveal reveal_TTB" data-delay="0.5">
                 최근 6개월 동안 개발자로 성장하기 위해 노력한 순간을 사진으로 소개합니다.<br>
                 매달 팀 프로젝트를 진행하며 협업하고 집중하는 수업 환경, 건강한 식단과 함께하는 바른생활 그리고<br>
                 색다른 아이디어를 찾아내는 쉼과 창의력이 담긴 순간들입니다.<br>
@@ -336,39 +364,46 @@
             <div class="log_moment">
                 <ul class="line_one">
                     <li>
-                        <img src="assets/img/log01.jpg" alt="log_moment">
+                        <div class="log_img">
+                            <img src="assets/img/log01.jpg" alt="log_moment">
+                        </div>
                         <p>steady development</p>
                     </li>
                     <li>
-                        <img src="assets/img/log02.jpg" alt="log_moment">
+                        <div class="log_img">
+                            <img src="assets/img/log02.jpg" alt="log_moment">
+                        </div>
                         <p>effort and passion</p>
                     </li>
                 </ul>
                 <ul class="line_two">
                     <li>
-                        <img src="assets/img/log03.jpg" alt="log_moment">
+                        <div class="log_img">
+                            <img src="assets/img/log03.jpg" alt="log_moment">
+                        </div>
                         <p>rest breathing</p>
                     </li>
                     <li>
-                        <img src="assets/img/log04.jpg" alt="log_moment">
+                        <div class="log_img">
+                            <img src="assets/img/log04.jpg" alt="log_moment">
+                        </div>
                         <p>healthy food</p>
                     </li>
                     <li>
-                        <img src="assets/img/log05.jpg" alt="log_moment">
+                        <div class="log_img">
+                            <img src="assets/img/log05.jpg" alt="log_moment">
+                        </div>
                         <p>health</p>
                     </li>
                 </ul>
             </div>
         </section>
+        <!-- log -->
 
-        <section id="section5" class="container">
+        <section id="info" class="container">
             <div class="section_title">
                 <h3>● my info</h3>
             </div>
-            <!-- <div class="round_point">
-                <img src="assets/img/info.jpg" alt="info">
-            </div> -->
-
             <div class="info_img">
                 <div class="CardBox">
                     <!-- last card -->
@@ -420,13 +455,10 @@
                 </div>
             </div>
 
-
-
-
             <div class="info_list">
-                <div class="keyword_area">
+                <div class="keyword_area reveal " data-delay="0.5">
                     <h4>keyword</h4>
-                    <div class="keyword_list">
+                    <div class="keyword_list reveal reveal_BTT" data-delay="0.7">
                         <ul>
                             <li>매우 강한 호기심</li>
                             <li>독특한 발상과 아이디어</li>
@@ -450,9 +482,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="skill_area">
+                <div class="skill_area reveal" data-delay="0.5">
                     <h4>SKILL</h4>
-                    <div class="skill_list">
+                    <div class="skill_list reveal reveal_BTT" data-delay="0.7">
                         <ul>
                             <li>Photoshop</li>
                             <li>Illustrator</li>
@@ -481,9 +513,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="career_area">
+                <div class="career_area reveal " data-delay="0.5">
                     <h4>CAREER</h4>
-                    <div class="career_list">
+                    <div class="career_list  reveal reveal_BTT" data-delay="0.7">
                         <ul>
                             <li>
                                 <em>살구뉴스</em>
@@ -510,30 +542,134 @@
                 </div>
             </div>
         </section>
+        <!-- info -->
 
+        <section id="talk" class="container">
+            <div class="section_title">
+                <h3>● comment</h3>
+            </div>
+            <div class="comment_wrap">
+                <ul>
+                    <li id="commentN01">
+                        <div class="comment_img">
+                            <img src="./assets/img/daily1.jpg" alt="daily1">
+                        </div>
+                        <div class="comment_write">
+                            <label for="write" class="blind">COMMENT01</label>
+                            <input id="write" type="text" placeholder="COMMENT" />
+                            <button><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="comments">
+                            <ul>
+                                <li>좋은 말입니다.</li>
+                                <li>good</li>
+                                <li>잘 보고 갑니다.</li>
+                                <li>It's a quote from Benjamin Franklin.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="commentN02">
+                        <div class="comment_img">
+                            <img src="./assets/img/daily2.jpg" alt="daily2">
+                        </div>
+                        <div class="comment_write">
+                            <label for="write" class="blind">COMMENT02</label>
+                            <input id="write" type="text" placeholder="COMMENT" />
+                            <button><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="comments">
+                            <ul>
+                                <li>
+                                    잘보고 감
+                                </li>
+                                <li>
+                                    날씨가 많이 춥습니다. 감기 조심하세요 ~
+                                </li>
+                                <li>good</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="commentN03">
+                        <div class="comment_img">
+                            <img src="./assets/img/daily3.jpg" alt="daily3">
+                        </div>
+                        <div class="comment_write">
+                            <label for="write" class="blind">COMMENT03</label>
+                            <input id="write" type="text" placeholder="COMMENT" />
+                            <button><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="comments">
+                            <ul>
+                                <li>멋진 프론트엔드 개발자가 되길 바랍니다.</li>
+                                <li>반가워요</li>
+                                <li>ㅋㅋ</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- comment -->
+
+        <section id="contact" class="container">
+            <div class="section_title">
+                <h3>● contact</h3>
+            </div>
+            <div class="contact_main reveal reveal_LTR" data-delay="0.5">
+                <p>
+                    Waiting for the day when we can be together
+                </p>
+            </div>
+            <div class="contact_wrap  reveal" data-delay="0.5">
+                <div class="contact_text">
+                    <h4>contact</h4>
+                    <p>Please contact us anytime. I will be waiting.</p>
+                </div>
+                <div class="contact_btn">
+                    <div class="btn_style">
+                        <a href="mailto:duddls6552@daum.net">
+                            <div class="info">
+                                <img src="assets/img/email.png" alt="icon">
+                                E-mail
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="btn_style">
+                        <a href="tel:010-7165-9586">
+                            <div class="info">
+                                <img src="assets/img/phone.png" alt="icon">
+                                Tel
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact -->
     </main>
 
+
+    <!-- 3d -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
     <script src="https://github.com/mrdoob/three.js/blob/master/src/constants.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script type="text/javascript" src="assets/js/bg.js"></script>
-    <script type="text/javascript" src="assets/js/scroll.js"></script>
-    <script type="text/javascript" src="assets/js/gsap.js"></script>
-    <script type="text/javascript" src="assets/js/card.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <!-- js -->
+    <script type="text/javascript" src="assets/js/bg.js"></script>
+    <script type="text/javascript" src="assets/js/scroll.js"></script>
+    <script type="module" src="assets/js/gsap.js"></script>
+    <script type="text/javascript" src="assets/js/card.js"></script>
+
+
     <script>
-        const lenis = new Lenis()
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
     </script>
 </body>
 

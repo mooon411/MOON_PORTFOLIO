@@ -1,0 +1,139 @@
+#talk {
+    padding-bottom: 10rem;
+}
+.comment_wrap {
+    padding-top: 3rem;
+}
+.comment_wrap > ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+/* comment_img 공통 디자인 */
+
+.comment_wrap .comment_img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid white;
+}
+.comment_wrap > ul > li:nth-child(odd) .comment_img {
+    margin-top: 13.4%;
+}
+.comment_wrap .comment_img img {
+    transition: 0.4s;
+}
+.comment_wrap .comment_img:hover img {
+    filter: blur(5px) brightness(60%);
+}
+.comment_wrap .comment_img::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+    word-break: keep-all;
+    font-family: var(--ko-font);
+    opacity: 0;
+    transition: all .8s;
+}
+.comment_wrap .comment_img:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+/* content */
+
+#commentN01 .comment_img::after {
+    content: "당신은 지체할 수도 있지만 시간은 그러하지 않을 것이다.";
+}
+#commentN02 .comment_img::after {
+    content: "실패로부터 성공을 발전시켜라. 낙담과 실패는 성공으로 가는 가장 확실한 두 개의 디딤돌이다.";
+}
+#commentN03 .comment_img::after {
+    content: "때때로 사소한 일이 위대한 결과를 가져올때 나는 사소한 일이란 없다는 생각을 한다.";
+}
+
+
+/* input */
+.comment_write {
+    position: relative;
+}
+.comment_write input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--font-color);
+    font-family: var(--ko-font);
+    font-size: 1rem;
+    border-bottom: 1px solid var(--font-color);
+}
+.comment_write input::placeholder {
+    font-family: var(--en-font);
+}
+.comment_write button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    color: var(--n-font-color);
+    transition: color 0.3s ease;
+}
+.comment_write button:hover {
+    color: var(--font-color);
+}
+
+/* comments */
+.comments ul {
+    width: 100%;
+    padding: 1rem 0;
+}
+.comments ul li {
+    width: 100%;
+    padding: 0.6rem;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+@media screen and (max-width: 1280px) {
+    .comment_wrap > ul {
+        gap: 1.2rem;
+    }
+    .comment_wrap .comment_img::after {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 700px) {
+    #talk {
+        padding-bottom: 5rem;
+    }
+
+    .comment_wrap > ul {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        gap: 40px;
+    }
+    .comment_wrap .comment_img::after {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        width: 70%;
+    }
+    .comment_wrap > ul > li:nth-child(odd) .comment_img {
+        margin-top: 0;
+    }
+}

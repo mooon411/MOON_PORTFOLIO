@@ -15,5 +15,10 @@
     --gray-color: #5d5d5d;
     --bg-color: #1C1C1C;
     --point-color: #1c46b2;
-    
+}
+
+@media screen and (max-width: 1280px) {
+    :root {
+        font-size: 14px;
+    }
 }

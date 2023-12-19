@@ -54,3 +54,87 @@
   left: 0%;
   width: 100%;
 }
+.nav_btn {
+    display: none;
+}
+
+
+@media screen and (max-width: 790px) {
+    nav {
+        display: none;
+    }
+    .nav_btn {
+        display: block;
+    }
+    .nav_btn input[id="menu"] {
+        display: none;
+    }
+    .m_nav {
+        position: absolute;
+        right: 5.2%;
+        top: 60px;
+        text-align: right;
+        transition: 0.4s;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .m_nav li {
+        padding: 0.7rem;
+        font-size: 1.1rem;
+        width: 150px;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        background-color: #ffffff65;
+        border-bottom: 1px solid var(--font-color);
+        text-transform: uppercase;
+
+    }
+
+    
+    .nav_btn input[id="menu"] + label {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .nav_btn input[id="menu"] + label span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 10px;
+        background: var(--font-color);
+        transition: 0.3s;
+    }
+    .nav_btn input[id="menu"] + label span:nth-child(1) {
+        top: 0;
+    }
+    .nav_btn input[id="menu"] + label span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav_btn input[id="menu"] + label span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* 클릭시 */
+    .nav_btn input[id="menu"]:checked + label span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .nav_btn input[id="menu"]:checked + label span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav_btn input[id="menu"]:checked + label span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+
+    .nav_btn input[id="menu"]:checked + label .m_nav {
+        opacity: 1; 
+    }
+    
+    
+}

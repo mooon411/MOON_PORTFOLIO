@@ -7,7 +7,7 @@
 .port_wrap li > a {
     display: block;
     width: calc(100%-1rem);
-    margin: 2rem 1rem;
+    margin: 1.5rem 1rem;
     height: auto;
     border: 1px solid var(--font-color);
     padding: 2rem 1.5rem;
@@ -134,4 +134,60 @@
 }
 .circle_link a div:hover::after {
     opacity: 0.5;
+}
+
+@media screen and (max-width: 1280px) {
+    .port_wrap {
+        flex-wrap: wrap;
+    }
+    .port_wrap ul {
+        width: 49%;
+    }
+    .port_wrap li > a {
+        margin: 2rem 0rem;
+        padding: 1.5rem;
+    }
+
+    .port_wrap li > a > span {
+        top: 2.5rem;
+        left: 38.5%;
+        padding: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .port_wrap li > a h4 {
+        line-height: 1;
+        margin-bottom: 35%;
+    }
+    .port_info p {
+        font-size: 1.1rem;
+    }
+    /* 원 */
+    .port_wrap .circle_link a {
+        padding: 50px;
+    }
+    .circle_link a div {
+        margin: 0;
+    }
+    .circle_link a div::after {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .port_wrap ul {
+        width: 100%;
+        margin: 0 !important;
+        margin-bottom: 5rem !important;
+    }
+    /* 원 */
+    .port_wrap .circle_link a {
+        padding: 40px;
+    }
+    .circle_link a div::after {
+        font-size: 2.8rem;
+    }
+    /* 하단 버튼 */
+    .port_btn {
+        margin-bottom: 7rem;
+    }
 }

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const delta = 5;
   const header = document.getElementById("myHeader");
   const navbarHeight = header.offsetHeight;
+  const menuCheckbox = document.getElementById("menu");
 
   window.addEventListener("scroll", function () {
     didScroll = true;
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (st > lastScrollTop && st > navbarHeight) {
       header.classList.remove("nav-down");
       header.classList.add("nav-up");
+      // 스크롤 시 checkbox 체크 해제
+      menuCheckbox.checked = false;
     } else {
       if (st + window.innerHeight < document.documentElement.scrollHeight) {
         header.classList.remove("nav-up");

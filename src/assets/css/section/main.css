@@ -1,17 +1,18 @@
-/* section1 ---> three.js */
-#section1 {
+/* home ---> three.js */
+#home {
     width: 100%;
     height: 100vh;
     cursor: crosshair;
+    position: relative;
 }
-#section1 #threeJs {
+#home #threeJs {
     display: block;
     width: 100%;
     height: 100%;
 }
 .main_title {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 10vw;
@@ -19,4 +20,68 @@
     text-align: center;
     line-height: 0.9;
     font-family: var(--title-font);
+    /* transform: translateY(50px); */
+    opacity: 0.8;
+}
+
+.intro_text {
+    position: absolute;
+    border: 1px solid var(--font-color);
+    border-radius: 10px;
+    max-width: 450px;
+    left: 5.2%;
+    bottom: 10%;
+    padding: 1rem 1.5rem;
+}
+.intro_text h3 {
+    font-size: 2.4rem;
+    font-family: var(--point-font);
+    margin-bottom: 0.3rem;
+}
+.intro_text p {
+    font-size: 0.9rem;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    padding-right: 1.8rem;
+    word-break: keep-all;
+}
+.intro_text a {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.8rem;
+    display: block;
+    text-align: right;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+    .main_title {
+        font-size: 14vw;
+    }
+    .intro_text {
+        max-width: 420px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .main_title {
+        font-size: 20vw;
+    }
+    .intro_text {
+        width: 90%;
+        max-width: unset;
+        left: 50%;
+        bottom: 7%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .intro_text h3 {
+        display: none;
+    }
+    .intro_text p {
+        padding-right: 1rem;
+    }
+    .intro_text a {
+        right: 1rem;
+    }
 }

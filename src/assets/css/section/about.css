@@ -1,4 +1,4 @@
-#section2 {
+#about {
     width: 100%;
     height: 100vh;
     background: var(--bg-color);
@@ -56,4 +56,52 @@
 
 .about_btn .btn_style:nth-child(1) {
     margin-right: 1rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .about_text {
+        max-width: 90%;
+        word-break: keep-all;
+    }
+    .about_text br {
+        display: none;
+    }
+    .about_box .about_item {
+        max-width: 300px;
+    }
+    .about_box .about_item br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .about_text {
+        display: none;
+    }
+    .about_bottom {
+        bottom: 5rem;
+        right: 0;
+        padding: 0 5.2%;
+    }
+    .about_box .about_item {
+        max-width: 100%;
+    }
+    .about_box img {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .about_box p {
+        max-width: 90%;
+        line-height: 1.7;
+    }
+    .about_bottom:hover .about_box img {
+        width: 8rem;
+        height: 8rem;
+        filter:grayscale(0);
+    }
+    .about_btn .btn_style:nth-child(1) {
+        margin-right: 0rem;
+    }
 }
