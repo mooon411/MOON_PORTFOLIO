@@ -169,3 +169,16 @@ gsap.to(".circle_link", {
     scrub: true,
   },
 });
+
+// log 이미지
+
+gsap.to(".log_moment img", {
+  y: "-20%", // 이미지를 스크롤 내릴 때 위로 20% 이동
+  ease: "none", // 이징(easing) 설정
+  scrollTrigger: {
+    trigger: "#log",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+  },
+});

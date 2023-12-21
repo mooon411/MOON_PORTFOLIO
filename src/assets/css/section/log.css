@@ -8,37 +8,71 @@
     font-family: var(--ko-font);
     line-height: 1.5;
     font-size: 1.2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 
 /* log_moment */
 .log_moment ul {
-    display: grid;
-    gap: 2rem;
-    align-items: flex-end;  
-}
-.log_moment ul.line_one {
-    grid-template-columns: 6fr 4fr;
-}
-.log_moment ul.line_two {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.log_moment ul li .log_img {
-    border-radius: 10px;
-    overflow: hidden;
-}
-.log_moment ul li .log_img img {
     width: 100%;
-    border-radius: 10px;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 22.8562, 0, 1);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+.log_moment ul li  {
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
+.log_moment ul.line_one li:nth-child(1){
+    width: 65%;
+}
+.log_moment ul.line_one li:nth-child(1) .log_img{
+    width: 100%;
+    height: 500px;
+}
+.log_moment ul.line_one li:nth-child(2){
+    width: 35%;
+    height: auto;
+}
+.log_moment ul.line_two li  {
+    width: calc(100%/3);
+    margin: .5rem;
+}
+.log_moment ul.line_two li:nth-child(1){
+    width: 38%;
+}
+.log_moment ul.line_two li:nth-child(1) .log_img{
+    width: 100%;
+    height: 350px;
+}
 .log_moment ul li p {
     font-size: 1rem;
+    padding: 1rem 0.5rem;
     text-transform: uppercase;
-    padding: 1rem 0;
 }
+.log_moment ul li .log_img {
+    position: relative;
+    width: 100%;
+    min-height: 290px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+.log_moment .log_img img {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+
 
 @media screen and (max-width: 1280px) {
     /* log_moment */
