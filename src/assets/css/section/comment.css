@@ -1,5 +1,6 @@
 #talk {
     padding-bottom: 10rem;
+    background-color: var(--bg-color);
 }
 .comment_wrap {
     padding-top: 3rem;

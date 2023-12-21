@@ -1,3 +1,6 @@
+#port {
+    background-color: var(--bg-color);
+}
 .port_wrap {
     width: 100%;
     height: auto;
@@ -81,7 +84,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10% 0;
+    padding: 10% 0;
 }
 
 .hover_info {
@@ -188,6 +191,6 @@
     }
     /* 하단 버튼 */
     .port_btn {
-        margin-bottom: 7rem;
+        padding-bottom: 7rem;
     }
 }

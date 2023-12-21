@@ -1,7 +1,7 @@
 #about {
     width: 100%;
     height: 100vh;
-    background: var(--bg-color);
+    background: linear-gradient(to bottom, transparent, var(--bg-color));
     position: relative;
     padding-top: 2.5rem;
 }
@@ -105,3 +105,4 @@
         margin-right: 0rem;
     }
 }
+

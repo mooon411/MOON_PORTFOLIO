@@ -1,5 +1,6 @@
 #log {
     padding-bottom: 10rem;
+    background-color: var(--bg-color);
 }
 .log_text {
     width: 100%;
@@ -25,12 +26,10 @@
 
 .log_moment ul li .log_img {
     border-radius: 10px;
-    border: 1px solid red;
     overflow: hidden;
 }
 .log_moment ul li .log_img img {
     width: 100%;
-    border: 4px solid blue;
     border-radius: 10px;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 22.8562, 0, 1);
 }

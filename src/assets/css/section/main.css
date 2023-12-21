@@ -3,12 +3,16 @@
     width: 100%;
     height: 100vh;
     cursor: crosshair;
-    position: relative;
+
 }
 #home #threeJs {
     display: block;
     width: 100%;
     height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 .main_title {
     position: absolute;
@@ -20,7 +24,6 @@
     text-align: center;
     line-height: 0.9;
     font-family: var(--title-font);
-    /* transform: translateY(50px); */
     opacity: 0.8;
 }
 
