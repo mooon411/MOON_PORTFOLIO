@@ -179,6 +179,6 @@ gsap.to(".log_moment img", {
     trigger: "#log",
     start: "top top",
     end: "bottom bottom",
-    scrub: true,
+    scrub: 0.5,
   },
 });
