@@ -1,6 +1,15 @@
 // BASIC parameters
-var renderer = new THREE.WebGLRenderer({ antialias: true });
+var renderer = new THREE.WebGLRenderer({
+  antialias: true,
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+if (window.innerWidth > 800) {
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.needsUpdate = true;
+}
+
 document.getElementById("threeJs").appendChild(renderer.domElement);
 window.addEventListener("resize", onWindowResize, false);
 
@@ -16,6 +25,7 @@ var camera = new THREE.PerspectiveCamera(
   1,
   500
 );
+
 camera.position.set(0, 8, 10);
 
 var scene = new THREE.Scene();
@@ -23,18 +33,53 @@ var city = new THREE.Object3D();
 var smoke = new THREE.Object3D();
 var town = new THREE.Object3D();
 
-scene.background = new THREE.Color(0xffbbdc);
-scene.fog = new THREE.Fog(0xffbbdc, 10, 16);
+var createCarPos = true;
+var uSpeed = 0.0005;
+
+// FOG background
+var setcolor = 0xffbbdc;
+
+scene.background = new THREE.Color(setcolor);
+scene.fog = new THREE.Fog(setcolor, 10, 16);
+function mathRandom(num = 8) {
+  var numValue = -Math.random() * num + Math.random() * num;
+  return numValue;
+}
+var setTintNum = true;
+
+function setTintColor() {
+  if (setTintNum) {
+    setTintNum = false;
+    var setColor = 0x000000;
+  } else {
+    setTintNum = true;
+    var setColor = 0x000000;
+  }
+  //setColor = 0x222222;
+  return setColor;
+}
 
 // CREATE City
 function init() {
   var segments = 2;
   for (var i = 1; i < 100; i++) {
-    var geometry = new THREE.BoxGeometry(1, 0, 1, segments, segments, segments);
+    var geometry = new THREE.CubeGeometry(
+      1,
+      0,
+      0,
+      segments,
+      segments,
+      segments
+    );
     var material = new THREE.MeshStandardMaterial({
-      color: 0x000000,
+      color: setTintColor(),
       wireframe: false,
-      flatShading: true,
+      //opacity:0.9,
+      //transparent:true,
+      //roughness: 0.3,
+      //metalness: 1,
+      shading: THREE.SmoothShading,
+      //shading:THREE.FlatShading,
       side: THREE.DoubleSide,
     });
     var wmaterial = new THREE.MeshLambertMaterial({
@@ -55,16 +100,20 @@ function init() {
     cube.receiveShadow = true;
     cube.rotationValue = 0.1 + Math.abs(mathRandom(8));
 
-    floor.scale.y = 0.05;
+    floor.scale.y = 0.05; //+mathRandom(0.5);
     cube.scale.y = 0.1 + Math.abs(mathRandom(8));
 
     var cubeWidth = 0.9;
     cube.scale.x = cube.scale.z = cubeWidth + mathRandom(1 - cubeWidth);
-
+    //cube.position.y = cube.scale.y / 2;
     cube.position.x = Math.round(mathRandom());
     cube.position.z = Math.round(mathRandom());
 
-    floor.position.set(cube.position.x, 0, cube.position.z);
+    floor.position.set(
+      cube.position.x,
+      0 /*floor.scale.y / 2*/,
+      cube.position.z
+    );
 
     town.add(floor);
     town.add(cube);
@@ -105,6 +154,7 @@ function init() {
 
   city.add(pelement);
 }
+
 // MOUSE function
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2(),
